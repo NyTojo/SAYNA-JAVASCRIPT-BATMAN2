@@ -124,7 +124,7 @@
             <div class="container">
 
                <div class="imgtxt"><h1 class="titre">Alliés</h1>
-            <img src="./home/Illustrations/Bathome12.png" alt="bat png" width="500" height="250" class="pose"></div> 
+            <img src="./home/Illustrations/Bathome12.png" alt="bat png" class="pose"></div> 
                 <p class="description" >Alfred est le majordome des Wayne. A leur mort il s’occupe de l’éducation du jeune Bruce avant de l’assister dans son rôle du Batman. Ce dernier rencontrera Catwoman dès le premier numéro des aventures de l’homme chauve-souris en 1940. Tantôt ennemie tantôt alliée la jeune femme fatale fera tourner la tête de Batman à maintes reprises. Du côté de la police, Bruce pourra compter sur l’aide infaillible de James Gordon, “Jim”, qui désire lui aussi nettoyer sa ville de la criminalité qui y règne.</p><br><br><br>
                     <div class="batman-personnage">
                         <div class="batman-item">
@@ -169,6 +169,8 @@ surnaturelles menacent son existence.
         
 
         <section id="multimedia">
+            <div class="container">
+            <h1 class="titre">MULTIMEDIA</h1>
                 <button class="left" >
                     <img src="./home/Logos/icon_flèche_1.png" alt="bouton gauche">
                 </button>
@@ -192,6 +194,7 @@ surnaturelles menacent son existence.
                         </p>
                     </div>
                 </div>
+            </div>
                
                 <div class="video-container">
                     <div class="image-bande-annonce">
@@ -207,21 +210,21 @@ surnaturelles menacent son existence.
                 <h2>PRENONS CONTACT</h2>
                 <form action="fill">
                     <label class="titre" for="email">ADRESSE EMAIL</label>
-                    <input type="email" name="email" id="email" placeholder="Mon email">
+                    <input type="email" name="email" id="email" placeholder="Adresse Email">
                     <label class="titre" for="newsletterb vff">NEWSLETTER</label>
                         <label for="check">En cochant cette case vous acceptez de recevoir l’actualité concernant les aventures de Batman :</label>
                         <input type="checkbox" id="check" name="newsletter" value="oui">
-                    <div class="dropdown" onclick="toggleDropdown()">
-                        <span>Choisissez la fréquence à laquelle vous souhaitez recevoir votre newslette</span>
+                        <div class="dropdown" onclick="toggleDropdown()">
+                        <span>Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter</span>
                         <span class="icon" >
                             <img src="./home/Logos/icon_flèche_2.png" alt="open" >
                         </span>
                         <div class="dropdown-content">
-                            <a href="#" onclick="showPopup('./home/Popup-Box.png')">Une fois par semaine</a>
-                            <a href="#" onclick="showPopup('./home/Popup-Box.png')">Une fois tous les deux semaines (2 fois par mois)</a>
-                            <a href="#" onclick="showPopup('./home/Popup-Box.png')">Une fois par mois</a>
-                            <a href="#" onclick="showPopup('./home/Popup-Box.png')">Une fois tous les trois mois</a>
-                            <a href="#" onclick="showPopup('./home/Popup-Box.png')">Une fois tous les six mois</a>
+                            <a href="#contact" onclick="showPopup('./home/Popup-Box.png')">Une fois par semaine</a>
+                            <a href="#contact" onclick="showPopup('./home/Popup-Box.png')">Une fois tous les deux semaines (2 fois par mois)</a>
+                            <a href="#contact" onclick="showPopup('./home/Popup-Box.png')">Une fois par mois</a>
+                            <a href="#contact" onclick="showPopup('./home/Popup-Box.png')">Une fois tous les trois mois</a>
+                            <a href="#contact" onclick="showPopup('./home/Popup-Box.png')">Une fois tous les six mois</a>
                         </div>
                     </div>
                     <div>
@@ -238,7 +241,7 @@ surnaturelles menacent son existence.
                     </div>
                     <p class="titre" >MESSAGE</p>
                     <textarea name="comment" cols="30" placeholder="Laissez un commentaire pour la communauté" ></textarea>
-                    <input type="submit" class="btn" value="CONFIRMER">
+                    <input type="submit" class="confirmer" value="CONFIRMER">
                 </form>
             </div>
 
@@ -266,6 +269,9 @@ surnaturelles menacent son existence.
               </div>
         </section>
     </main>
+    <div class="espace-vertical"></div>
+    <div class="espace-vertical"></div>
+    <div class="espace-vertical"></div>
     <div class="clearfix"></div>
     <footer>
         <div class="container" >
@@ -288,7 +294,7 @@ surnaturelles menacent son existence.
     </footer>
     <div class="espace-vertical"></div>
 </body>
-<script src="./assets/script/script.js"></script>
+<script src="./home/script/script.js"></script>
 <div class="cont">
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4">

@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family:'rajdhani' ;
+    src: url(../Rajdhani-Medium.ttf);
+}
+
+/* Styles pour l'ensemble du document */
+html {
+    position: relative;
+    z-index: 1;
+  }
+  
+  body {
+    position: relative;
+    z-index: 2;
+  }
+/* Couleurs personnalisées */
+:root{
+    --yellow-color: #FFFF00;
+    --yellow-light: #f8f184;
+    --blue-color : #19587d;
+    --white-color:#fff;
+    --gradient-white:#eddebf67;
+    --gradient-red:#89000978;
+    --black-color: #000;
+}
+/* Réinitialisation des styles par défaut */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: 'rajdhani';
+    font-size: 36px;
+    font-weight: 400;
+}
+
+button{
+    font-family: 'rajdhani';
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.fleche:hover {
+  background-color: #b6b2b2;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Space Grotesk';
+    font-weight: 300;
+}
+
+.up-bar {
+    border-top: #807e7e7c 2px solid;
+    position: relative;
+    top: 132px;
+    width: 85%;
+    left: 102px;
+}
+
+.left-bar,
+.right-bar {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #807e7e7c;
+  z-index: 4;
+}
+
+.left-bar {
+  left: 102px;
+}
+
+.right-bar {
+  right: 88px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+ul li{
+    display: inline-flex;
+    margin-left: 15px;
+}
+
+ul{
+    list-style: none;
+
+}
+
+nav ul a{
+    color: var(--white-color) ;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'rajdhani';
+    text-decoration: none;
+
+}
+
+nav ul a:hover{
+    color: var(--yellow-color);
+}
+
+.logo:hover {
+    -webkit-filter: invert(4%) sepia(100%) saturate(1680%) hue-rotate(352deg) brightness(109%) contrast(104%);
+            filter: invert(4%) sepia(100%) saturate(1680%) hue-rotate(352deg) brightness(109%) contrast(104%);
+}
+
+
+#hero {
+    background-image: url(/game/Illustrations/wallpaper.png);
+    height: 800px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+#hero .titre{
+    margin: 20px 0;
+}
+
+h1, h2, h3, p {
+    opacity: 0;
+    position: relative;
+    left: -100%;
+    animation: fade-in 2s ease-out forwards;
+}
+  
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      left: -50%;
+    }
+    100% {
+      opacity: 1;
+      left: 0;
+    }
+}
+
+/*responsive*/
+
+@media (max-width: 600px) {
+    .cont {
+        width: 60%;
+    }
+    .logo {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .cont {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cont {
+        width: 80%;
+    }
+    .logo {
+        max-width: 120px;
+    }
+}
+
+.btn{
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 22px;
+    padding: 10px 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: linear-gradient(
+        80deg,var(--gradient-white),var(--gradient-red)
+    );
+    box-shadow: var(--black-color) 15px 15px 50px;
+}
+
+.btn:hover {
+    background: linear-gradient(80deg, #c0c0c0, #c90000);
+    color: #ffffff;
+}
+/* Styles pour les groupe de boutons */
+.btn-group{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#hero .fleche{
+    display: block;
+    margin: 0 auto;
+    margin-top: 285px;
+}
+
+.scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 25px;
+    top: 230px;
+    z-index: 10;
+}
+
+.scroll .social{
+    margin-top: 15px;
+}
+
+.scroll img {
+    margin: 0 10px;
+    cursor: pointer;
+}
+  
+.scroll img:hover {
+       -webkit-filter: invert(4%) sepia(100%) saturate(1680%) hue-rotate(352deg) brightness(109%) contrast(104%);
+       filter: invert(4%) sepia(100%) saturate(1680%) hue-rotate(352deg) brightness(109%) contrast(104%);
+}
+
+.social-footer img:hover {
+      -webkit-filter: invert(4%) sepia(100%) saturate(1680%) hue-rotate(352deg) brightness(109%) contrast(104%);
+      filter: invert(4%) sepia(100%) saturate(1680%) hue-rotate(352deg) brightness(109%) contrast(104%);
+}
+
+
+/* Espacement vertical */
+.espace-vertical {
+    height: 65px;
+}
+
+/* Styles pour la section des citations */
+
+#citations{
+    margin: 90px;
+}
+
+#citations .citation-carte{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#citations .citation-auteur{
+    padding-top: 30px;
+    font-size: 14px;
+    font-family: 'radjhani';
+}
+
+#citations .guillemet-close{
+    float: right;
+}
+
+.ltr{
+    color: rgb(0, 195, 255);
+    font-size: 5px;
+}
+
+/* Styles pour le pied de page */
+
+footer{
+    margin-top: 162px;
+}
+
+footer .text-footer{
+    text-align: center;
+    font-size: 14px;
+}
+
+footer .social-footer{
+    text-align: center;
+    margin: 50px 0;
+}
+
+footer .social-item{
+    padding: 15px;
+}
+
+/* Styles pour le barres de défilement */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background-color: #000000;
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+/* Styles pour iframes */
+

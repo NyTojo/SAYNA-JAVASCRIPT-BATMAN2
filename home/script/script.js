@@ -16,3 +16,18 @@ function showPopup(message) {
   setTimeout(function()
   {popup.style.display = 'none';}, 2000);
 }
+
+var image = document.getElementById("justice-league-image");
+var originalImageSrc = image.src;
+var newImageSrc = "./home/Illustrations/justiceleague.png";
+var isClicked = false;
+
+image.addEventListener("click", function() {
+    if (isClicked) {
+        image.src = originalImageSrc;
+        isClicked = false;
+    } else {
+        image.src = newImageSrc;
+        isClicked = true;
+    }
+});

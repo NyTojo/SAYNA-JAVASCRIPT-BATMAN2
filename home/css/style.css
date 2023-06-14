@@ -391,6 +391,11 @@ h1{
     z-index: 5;
 }
 
+.jl{
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
 
 .jl .right-bar,
 .jl .left-bar,
@@ -398,6 +403,8 @@ section#contact .right-bar,
 section#contact .left-bar {
     display: none;
 }
+
+
 #contact .form{
     width: 70%;
     margin: auto;
@@ -470,12 +477,6 @@ section#contact .left-bar {
     font-family: rajdhani;
 }
 
-
-.jl{
-    width: 100%;
-    position: relative;
-    z-index: 5;
-}
 
 /* Styles pour les menus déroulants */
 

@@ -89,7 +89,7 @@
             <div class="container">
                
                     <div class="imgtxt"><h1 class="titre">Némésis</h1>
-                    <img src="./home/Illustrations/Bathome13.png" width="150" height="150" alt="bat chouricken" class="superpose">
+                    <img src="./home/Illustrations/Bathome13.png" alt="bat chouricken" class="superpose">
                     </div>
                 <p class="description" >Batman souhaite éradiquer la criminalité de Gotham. C'est pourquoi il affrontera la plupart du temp, des vilains sans capacités surnaturelles mais particulièrement violent ou psychopathes avec sont introduction dans Justice league il aura l'occasion de se mesurer à des antagonistes qui défient l'imagination et les loi de la physique.
                     Parmi les dernièrs ennemis emblématique que avons pu voir au cinema, on retrouve:</p><br><br>
@@ -123,8 +123,9 @@
         <section id="Alliés">
             <div class="container">
 
-               <div class="imgtxt"><h1 class="titre">Alliés</h1>
-            <img src="./home/Illustrations/Bathome12.png" alt="bat png" class="pose"></div> 
+                <div class="imgtxt"><h1 class="titre">Alliés</h1>
+            <img src="./home/Illustrations/Bathome12.png" alt="bat png" class="pose">
+                </div> 
                 <p class="description" >Alfred est le majordome des Wayne. A leur mort il s’occupe de l’éducation du jeune Bruce avant de l’assister dans son rôle du Batman. Ce dernier rencontrera Catwoman dès le premier numéro des aventures de l’homme chauve-souris en 1940. Tantôt ennemie tantôt alliée la jeune femme fatale fera tourner la tête de Batman à maintes reprises. Du côté de la police, Bruce pourra compter sur l’aide infaillible de James Gordon, “Jim”, qui désire lui aussi nettoyer sa ville de la criminalité qui y règne.</p><br><br><br>
                     <div class="batman-personnage">
                         <div class="batman-item">
@@ -220,14 +221,14 @@ surnaturelles menacent son existence.
                             <img src="./home/Logos/icon_flèche_2.png" alt="open" >
                         </span>
                         <div class="dropdown-content">
-                            <a href="#contact" onclick="showPopup('MESSAGE REçU!')">Une fois par semaine</a>
-                            <a href="#contact" onclick="showPopup('MESSAGE REçU!')">Une fois tous les deux semaines (2 fois par mois)</a>
-                            <a href="#contact" onclick="showPopup('MESSAGE REçU!')">Une fois par mois</a>
-                            <a href="#contact" onclick="showPopup('MESSAGE REçU!')">Une fois tous les trois mois</a>
-                            <a href="#contact" onclick="showPopup('MESSAGE REçU!')">Une fois tous les six mois</a>
+                            <a href="#contact" onclick="showPopup('message reçu!')">Une fois par semaine</a>
+                            <a href="#contact" onclick="showPopup('message reçu!')">Une fois tous les deux semaines (2 fois par mois)</a>
+                            <a href="#contact" onclick="showPopup('message reçu!')">Une fois par mois</a>
+                            <a href="#contact" onclick="showPopup('message reçu!')">Une fois tous les trois mois</a>
+                            <a href="#contact" onclick="showPopup('message reçu!')">Une fois tous les six mois</a>
                         </div>
                     </div>
-                    <div class="popup">MESSAGE REçU</div>
+                    <div id="popup" class="popup"><p></p></div>
                     <div>
                         <p class="news" >Souhaitez-vous recevoir des news
                         </p>
@@ -242,7 +243,7 @@ surnaturelles menacent son existence.
                     </div>
                     <p class="titre" >MESSAGE</p>
                     <textarea name="comment" cols="30" placeholder="Laissez un commentaire pour la communauté" ></textarea>
-                    <input type="submit" class="confirmer" value="CONFIRMER">
+                    <input type="submit" class="confirmer" onclick="showPopup('message reçu!')" value="CONFIRMER">
                 </form>
             </div>
 
@@ -294,19 +295,6 @@ surnaturelles menacent son existence.
         </div>
     </footer>
     <div class="espace-vertical"></div>
+    <script src="./home/script/script.js"></script>
 </body>
-<script src="./home/script/script.js"></script>
-<div class="cont">
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4">
-        
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-           
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-         
-        </div>
-    </div>
-</div>
 </html>

@@ -196,6 +196,7 @@ h1, h2, h3, p {
     color: #ffffff;
 }
 /* Styles pour les groupe de boutons */
+
 .btn-group{
     padding: 10px;
     display: flex;
@@ -300,6 +301,8 @@ h1{
     right: 70px;
     left: 60px;
     z-index: 2;
+    width: 150px;
+    height: 150px;
 }
 
 .pose{
@@ -397,9 +400,10 @@ section#contact .left-bar {
 }
 #contact .form{
     width: 70%;
-    margin: 0 auto;
-    margin-left: 300px;
+    margin: auto;
+    margin-left:250px;
 }
+
 
 #contact h2{
     text-align: center;
@@ -516,20 +520,23 @@ span{
     display: none;
     position: relative;
     transform: translate(-50%, -50%);
-    background: linear-gradient(143deg,rgba(237, 222, 191, 0.4),rgba(25, 88, 125, 0.4) 80%);
+    background: linear-gradient(143deg,rgba(237, 222, 191, 1),rgba(25, 88, 125, 1) 80%);
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 9999;
     width: 500px;
     height: 500px;
     border-radius: 20px;
+    margin: 50%;
   }
   
-  
-  .popup p {
+  .popup
+  p{
     font-weight: bold;
     text-align: center;
   }
+  
+
 
 /* Styles pour les étiquettes des boutons */
 .btn-group{
@@ -548,8 +555,8 @@ span{
     text-decoration: none;
     color: var(--white-color);
     font-size: 22px;
-    padding: 10px 40px;
     margin-top: 10px;
+    margin-left: -300px;
     border-radius: 10px;
     border: linear-gradient(80deg,var(--gradient-white),var(--gradient-red));;
     background: linear-gradient(80deg,var(--gradient-white),var(--gradient-red));
@@ -696,10 +703,16 @@ iframe{
     padding-top: 100px;
   }
 
+  .scroll{
+    display: none;
+    position: unset;
+  }
+
   h1,
   h2,
   h3,
   p {
+    color: #fff;
     opacity: 1;
     position: relative;
     left: 0;
@@ -711,6 +724,7 @@ iframe{
   #Alliés img{
     height: 200px;
     width: 150px;
+    margin-left: 0;
   }
  
   .up-bar {
@@ -761,6 +775,7 @@ iframe{
     width: 100%;
     margin-top: 20px;
   }
+
   .form {
     padding: 20px;
   }
@@ -804,8 +819,8 @@ iframe{
   
   
   .left, .right {
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
   }
   
   .image-bande-annonce iframe {
@@ -820,7 +835,6 @@ iframe{
   .form input[type="email"],
   .form textarea,
   .form input[type="submit"] {
-    width: 100%;
     padding: 10px;
     font-size: 14px;
   }
@@ -828,11 +842,18 @@ iframe{
   .confirmer {
     font-size: 12px;
     padding: 5px 10px; 
+    width: 20px;
   }
   
   
   .titre {
     font-size: 18px;
+  }
+
+  .imgtxt .superpose,
+  .imgtxt .pose{
+   width: 20px;
+   height: 20px;
   }
 
 }

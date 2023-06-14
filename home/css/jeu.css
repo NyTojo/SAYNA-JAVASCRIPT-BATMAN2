@@ -45,6 +45,8 @@ button{
     font-weight: 400;
 }
 
+
+
 .fleche:hover {
   background-color: #b6b2b2;
 }
@@ -124,7 +126,7 @@ nav ul a:hover{
 
 
 #hero {
-    background-image: url(/game/Illustrations/wallpaper.png);
+    background-image: url(../Illustrations/Batgame_1.png);
     height: 800px;
     background-position: top center;
     background-repeat: no-repeat;
@@ -164,33 +166,6 @@ h1, h2, h3, p {
     }
 }
 
-/*responsive*/
-
-@media (max-width: 600px) {
-    .cont {
-        width: 60%;
-    }
-    .logo {
-        max-width: 50%;
-    }
-}
-
-@media (max-width: 600px) {
-    
-    .cont {
-        width: 100%;
-        padding: 0 10px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .cont {
-        width: 80%;
-    }
-    .logo {
-        max-width: 120px;
-    }
-}
 
 .btn{
     text-decoration: none;
@@ -210,11 +185,7 @@ h1, h2, h3, p {
     color: #ffffff;
 }
 /* Styles pour les groupe de boutons */
-.btn-group{
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-}
+
 
 #hero .fleche{
     display: block;
@@ -227,18 +198,20 @@ h1, h2, h3, p {
     flex-direction: column;
     align-items: center;
     position: fixed;
-    right: 25px;
+    right: 39px;
     top: 230px;
     z-index: 10;
 }
 
 .scroll .social{
     margin-top: 15px;
+    width: auto;
 }
 
 .scroll img {
     margin: 0 10px;
     cursor: pointer;
+    width: 80px;
 }
   
 .scroll img:hover {
@@ -254,7 +227,7 @@ h1, h2, h3, p {
 
 /* Espacement vertical */
 .espace-vertical {
-    height: 65px;
+    height: 300px;
 }
 
 /* Styles pour la section des citations */
@@ -318,5 +291,203 @@ footer .social-item{
     background-color: #888;
     border-radius: 5px;
 }
-/* Styles pour iframes */
+
+@media (max-width: 768px) {
+
+    #batman-cinema .description, #némésis .description, #Alliés .description, #batman-justice-league .description{
+        text-align: justify;
+        font-size: 13px;
+    }
+
+    
+    #hero {
+        background-image: url(../Illustrations/Batgame_1.png);
+        width: 100%;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-color: #000000;
+        background-size: contain;
+    }
+
+  nav {
+    display: flex;
+  }
+
+  nav
+  ul{
+    display: flex;
+  }
+
+  ul li {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+
+  .logo {
+    max-width: 60px;
+    margin-bottom: 10px;
+    padding: 5px 10px; 
+  }
+
+  .content {
+    width: 100%;
+    padding-top: 100px;
+  }
+
+  .scroll{
+    display: none;
+    position: unset;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    color: #fff;
+    opacity: 1;
+    position: relative;
+    left: 0;
+    animation: none;
+  }
+
+  #batman-cinema img,
+  #némésis img,
+  #Alliés img{
+    height: 200px;
+    width: 150px;
+    margin-left: 0;
+  }
+ 
+  .up-bar {
+    display: none;
+  }
+
+  .left-bar,
+  .right-bar {
+    display: none;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 5px 10px; 
+  }
+
+  #hero .fleche {
+    margin-top: 220px;
+  }
+
+  #multimedia button {
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  #multimedia .slider-multimedia {
+    flex-direction: column;
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  
+  .video-container {
+    margin-top: 40px;
+  }
+
+  
+  #contact .form {
+    width: 100%;
+    margin-left: 0;
+  }
+
+ 
+  .dropdown {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .form {
+    padding: 20px;
+  }
+
+  .form h2 {
+    font-size: 24px;
+  }
+
+  .form input[type="email"],
+  .form textarea {
+    width: 100%;
+  }
+
+  .form .dropdown span.icon {
+    display: none;
+  }
+
+  .form .dropdown-content {
+    position: static;
+    display: block;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .container .citation-carte {
+    padding: 20px; 
+  }
+
+  .container .citation-texte {
+    font-size: 16px;
+  }
+
+    .container .citation-auteur {
+    font-size: 12px;
+  }
+   .slider-multimedia {
+    padding: 20px;
+  }
+  
+  
+  .left, .right {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .image-bande-annonce iframe {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .form {
+    padding: 20px;
+  }
+  
+  .form input[type="email"],
+  .form textarea,
+  .form input[type="submit"] {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .confirmer {
+    font-size: 12px;
+    padding: 5px 10px; 
+    width: 20px;
+  }
+  
+  
+  .titre {
+    font-size: 18px;
+  }
+
+  .imgtxt .superpose,
+  .imgtxt .pose{
+   width: 20px;
+   height: 20px;
+  }
+
+}
 

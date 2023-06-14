@@ -3,10 +3,16 @@ function toggleDropdown() {
   dropdownContent.style.display = (dropdownContent.style.display === 'none') ? 'block' : 'none';
 }
 
-function showPopup(imageUrl) {
-  var popup = document.querySelector('.popup');
-  popup.innerHTML = '<img src="' + imageUrl + '" alt="popup" style="width: 100%; height: 100%;">';
-  popup.style.display = 'block';
+function showPopup(message) {
+  var popup = document.getElementById("popup");
+  popup.textContent = message;
+  popup.style.display = "flex";
+  popup.style.alignItems = "center";
+  popup.style.justifyContent = "center";
+  popup.style.fontSize = "30px";
+  popup.style.fontFamily = "space-grotesk";
+  popup.style.marginTop = "-1px"
+
   setTimeout(function()
   {popup.style.display = 'none';}, 2000);
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batman begins Games</title>
     <link rel="stylesheet" href="./home/css/jeu.css">
-    <script src="./home/script/jeu.js"></script>
+    <script src="./home/script/jquery-3.6.0.js"></script>
 </head>
 <body>
     <div class="up-bar"></div>
@@ -31,30 +31,49 @@
         <img class="social" src="./home/Logos/icon_tw.png" alt="icon_thwiter">
         <img src="./home/Logos/logo_bat_flèche_2.png" alt="flèche bas">
      </div>
+     
     <section id="hero">
         <div class="container">
-           <h1> LET’S PLAY <br> A LITTLE GAME...</h1>
+           <h1 class="titre"> LET’S PLAY <br> A LITTLE GAME...</h1>
            <div class="espace-vertical"></div>
            <img class="fleche" src="./home/Logos/flèche_down_header.png" alt="fleche down">
         </div>
     </section>
 
-    <section id="quizz">
-     <div class="container">
-      <div class="content">
-        <div>
-        <h2>Connaissez vous bien le chevalier noir?</h2>
-        <img src="./home/Illustrations/Batgame_2.png" alt="batman">
-        </div>
-        <a class="btn" href="#game">Demarrer le quizz</a>
-      </div>
-     </div>
-    </section>
-
-    <section id="game">
-
-    </section>
-
+    <section id="introduction">
+        <div class="container">
+          
+            <div>
+              <h2>Connaissez-vous bien le chevalier noir?</h2>
+              <img src="./home/Illustrations/Batgame_2.png" alt="batman">
+            </div>
+          </div>
+          <button id="gamestart" onclick="startQuiz()">Démarrer le quizz</button>
+        
+      </section>
+      <div class="espace-vertical"></div>
+      
+      <section id="quiz" style="display: none;">
+          <div class="container">
+            <div class="image-container"><img class="image-gauche" src="./home/Illustrations/Batgame_3.png" alt=""></div>
+            <div>
+            <h1><span class="level">1</span>/<span>15</h1><br>
+            <h2 id="question">Quel est l'autre nom de l'Homme-Mystère ?</h2>
+           
+            <div class="choices" id="choices">
+                <input type="checkbox">
+                <label for="">Le Sphinx</label>
+                <input type="checkbox">
+                <label for="">Saphir</label>
+                <input type="checkbox">
+                <label for="">Le Joker</label>
+            </div>
+            <button class="nextButton" id="nextButton" style="display: block;">Question Suivante</button>
+           </div>
+          </div>
+      </section>
+     
+      
     </main>
    <footer>
     <div class="container" >
@@ -75,5 +94,6 @@
         </div>
     </div>
 </footer>
+<script src="./home/script/jeu.js"></script>
 </body>
 </html>

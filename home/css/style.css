@@ -385,7 +385,7 @@ h1{
 
 #contact{
     background: linear-gradient(
-    143deg,rgba(237, 222, 191, 0.4),rgba(2, 94, 148, 0.562) 80%);
+    143deg,rgba(237, 222, 191, 0.6),rgba(2, 94, 148, 0.6) 80%);
     padding: 70px 0;
     position: relative;
     z-index: 5;
@@ -513,7 +513,7 @@ span{
     text-decoration: none;
     text-align: center;
     border-bottom: #a8a8a8a4 1px solid;
-    background: linear-gradient(143deg,rgba(237, 222, 191, 0.4),rgba(25, 88, 125, 0.4) 80%);
+    background: linear-gradient(143deg,rgba(237, 222, 191, 0.5),rgba(25, 88, 125, 0.5) 80%);
 }
 
 
@@ -521,7 +521,7 @@ span{
     display: none;
     position: relative;
     transform: translate(-50%, -50%);
-    background: linear-gradient(143deg,rgba(237, 222, 191, 1),rgba(25, 88, 125, 1) 80%);
+    background: linear-gradient(143deg,rgba(237, 222, 191, 0.7),rgba(25, 88, 125, 0.7) 80%);
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 9999;

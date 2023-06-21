@@ -17,13 +17,13 @@ html {
   }
 /* Couleurs personnalisées */
 :root{
-    --yellow-color: #FFFF00;
+    --yellow-color: #ff7b00;
     --yellow-light: #f8f184;
     --blue-color : #19587d;
-    --white-color:#fff;
-    --gradient-white:#eddebf67;
+    --white-color:#ffffff;
+    --gradient-white:#ebe3d58a;
     --gradient-red:#89000978;
-    --black-color: #000;
+    --black-color: #4d2121;
 }
 /* Réinitialisation des styles par défaut */
 *{
@@ -32,28 +32,16 @@ html {
     box-sizing: border-box;
 }
 
-h1{
-    font-family: 'rajdhani';
-    font-size: 50px;
-    font-weight: 400;
-    top: 300px;
-}
-
-button{
-    font-family: 'rajdhani';
-    font-size: 20px;
-    font-weight: 400;
-}
-
-
 
 .fleche:hover {
   background-color: #b6b2b2;
 }
 
-.container{
-    width: 80%;
-    margin: 0 auto;
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  
+
 }
 
 body{
@@ -64,7 +52,7 @@ body{
 }
 
 .up-bar {
-    border-top: #807e7e7c 2px solid;
+    border-top: #807e7e7c 3px solid;
     position: relative;
     top: 132px;
     width: 85%;
@@ -75,7 +63,7 @@ body{
 .right-bar {
   position: absolute;
   top: 0;
-  width: 2px;
+  width: 3px;
   height: 100%;
   background-color: #807e7e7c;
   z-index: 4;
@@ -94,6 +82,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 30px 0;
+    width: 100vh;
 }
 
 ul li{
@@ -143,8 +132,9 @@ nav ul a:hover{
     padding-top: 150px;
 }
 
-#hero .titre{
+#hero h1{
     margin: 20px 0;
+    margin-left: -500px;
 }
 
 h1, h2, h3, p {
@@ -166,8 +156,14 @@ h1, h2, h3, p {
     }
 }
 
+.image-container
+.image-gauche {
+  margin-top: 30px;
+}
 
-.btn{
+
+button{
+  margin-left: 500px;
     text-decoration: none;
     color: var(--white-color);
     font-size: 22px;
@@ -175,17 +171,28 @@ h1, h2, h3, p {
     margin-top: 10px;
     border-radius: 10px;
     background: linear-gradient(
-        80deg,var(--gradient-white),var(--gradient-red)
+        90deg,#dfdfdf,#b95a01
     );
     box-shadow: var(--black-color) 15px 15px 50px;
 }
 
-.btn:hover {
-    background: linear-gradient(80deg, #c0c0c0, #c90000);
+button:hover {
+    background: linear-gradient(
+      80deg,var(--white-color),var(--yellow-color)
+  );
     color: #ffffff;
 }
 /* Styles pour les groupe de boutons */
-
+#hero
+.container
+h1{
+  font-family: 'rajdhani';
+  font-size: 50px;
+  font-weight: 400;
+  top: 300px;
+  margin-left: 0%;
+  width: 100vh;
+}
 
 #hero .fleche{
     display: block;
@@ -224,13 +231,52 @@ h1, h2, h3, p {
       filter: invert(4%) sepia(100%) saturate(1680%) hue-rotate(352deg) brightness(109%) contrast(104%);
 }
 
+#introduction
+.container
+ img{
+  margin-left: -150px
+  ;
+}
+
+#quiz
+.container{
+  width: 900px;
+ align-items: center;
+ display: flex;
+ justify-content: space-between;
+}
+
+#quiz
+.nextButton{
+  font-size: 30px;
+  background: linear-gradient(
+        80deg,var(--gradient-white),var(--yellow-color)
+    );
+    font-size: 22px;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 70px;
+}
+
+#quiz
+.container
+.choices{
+  display: flex;
+  flex-direction: column;
+}
+
+#quiz
+h1{
+  margin-top: -100px;
+  margin-left: 50px;
+}
 
 /* Espacement vertical */
 .espace-vertical {
-    height: 300px;
+    height: 200px;
 }
 
-/* Styles pour la section des citations */
+/* Styles pour la section citations */
 
 #citations{
     margin: 90px;
@@ -352,14 +398,7 @@ footer .social-item{
     animation: none;
   }
 
-  #batman-cinema img,
-  #némésis img,
-  #Alliés img{
-    height: 200px;
-    width: 150px;
-    margin-left: 0;
-  }
- 
+
   .up-bar {
     display: none;
   }
@@ -372,121 +411,6 @@ footer .social-item{
   .btn {
     font-size: 12px;
     padding: 5px 10px; 
-  }
-
-  #hero .fleche {
-    margin-top: 220px;
-  }
-
-  #multimedia button {
-    top: 0;
-    left: 0;
-    transform: none;
-    margin-top: 10px;
-    margin-left: 0;
-  }
-
-  #multimedia .slider-multimedia {
-    flex-direction: column;
-    width: 100%;
-    margin: 40px 0;
-  }
-
-  
-  .video-container {
-    margin-top: 40px;
-  }
-
-  
-  #contact .form {
-    width: 100%;
-    margin-left: 0;
-  }
-
- 
-  .dropdown {
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  .form {
-    padding: 20px;
-  }
-
-  .form h2 {
-    font-size: 24px;
-  }
-
-  .form input[type="email"],
-  .form textarea {
-    width: 100%;
-  }
-
-  .form .dropdown span.icon {
-    display: none;
-  }
-
-  .form .dropdown-content {
-    position: static;
-    display: block;
-  }
-
-  .container {
-    padding: 20px;
-  }
-
-  .container .citation-carte {
-    padding: 20px; 
-  }
-
-  .container .citation-texte {
-    font-size: 16px;
-  }
-
-    .container .citation-auteur {
-    font-size: 12px;
-  }
-   .slider-multimedia {
-    padding: 20px;
-  }
-  
-  
-  .left, .right {
-    width: 10px;
-    height: 10px;
-  }
-  
-  .image-bande-annonce iframe {
-    width: 100%;
-    height: 200px;
-  }
-  
-  .form {
-    padding: 20px;
-  }
-  
-  .form input[type="email"],
-  .form textarea,
-  .form input[type="submit"] {
-    padding: 10px;
-    font-size: 14px;
-  }
-  
-  .confirmer {
-    font-size: 12px;
-    padding: 5px 10px; 
-    width: 20px;
-  }
-  
-  
-  .titre {
-    font-size: 18px;
-  }
-
-  .imgtxt .superpose,
-  .imgtxt .pose{
-   width: 20px;
-   height: 20px;
   }
 
 }

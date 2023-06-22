@@ -254,13 +254,6 @@ h1, h2, h3, p {
     text-align: center;
 }
 
-.batman-item{
-    transition: transform 0.3s ease-in-out;
-}
-
-.batman-item:hover{
-    transform: scale(1.1);
-}
 
 #batman-cinema .titre, #batman-justice-league .titre, #némésis .titre, #Alliés .titre{
     text-transform: uppercase;
@@ -275,9 +268,79 @@ h1, h2, h3, p {
     font-size: 21px;
 }
 
-#batman-cinema .personnage-info{
-    text-align: center;
-}
+
+
+.batman-item {
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  .batman-item:hover {
+    transform: scale(1.1);
+  }
+  
+  .pochette {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.532);
+    padding-top: 5px;
+    border: 2px solid rgba(73, 72, 72, 0.479);
+    display: none;
+    height: 100px;
+  }
+  
+  .batman-item:hover .pochette {
+    display: block;
+  }
+  
+  .personnage-info {
+    align-items: center;
+    background: linear-gradient(90deg, rgba(237, 222, 191, 0.3) 30%, rgba(137, 0, 8, 0.3) 100%);
+    border-radius: 30px;
+    margin: 20px 40px;
+    width: 80%;
+    height: 60px;
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  
+  .personnage-info h3 {
+    font-size: 13px;
+    padding: 15px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation: none;
+    opacity: 100;
+    left: 0%;
+  }
+  
+  .personnage-info p {
+    color: #f8f184;
+    font-weight: normal;
+    font-size: 9px;
+    animation: none;
+    opacity: 100;
+    left: 0%;
+  }
+  
+  .personnage-info .miniature {
+    float: left;
+    display: block;
+    max-width: 70px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 50%;
+   
+  }
+  
+  .pochette * {
+    margin: 0;
+    padding: 0;
+  }
+  
 
 /* Styles pour la mise en page de l'image et du texte superposés */
 .imgtxt {

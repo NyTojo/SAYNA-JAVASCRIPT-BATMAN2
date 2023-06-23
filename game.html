@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batman begins Games</title>
     <link rel="stylesheet" href="./home/css/jeu.css">
-    <script src="./home/script/jquery-3.6.0.js"></script>
 </head>
 <body>
     <div class="up-bar"></div>
@@ -22,78 +21,97 @@
                 <li><a href="game.html">Games</a></li>
             </ul>
         </nav>
-   </header>
-   <main>
-    <div class="scroll">
-        <img src="./home/Logos/logo_bat_flèche.png" alt="flèche haut">
-        <img class="social" src="./home/Logos/icon_facebook.png" alt="icon_facebook">
-        <img class="social" src="./home/Logos/icon_ig.png" alt="icon_instagram">
-        <img class="social" src="./home/Logos/icon_tw.png" alt="icon_thwiter">
-        <img src="./home/Logos/logo_bat_flèche_2.png" alt="flèche bas">
-     </div>
-     
-    <section id="hero">
-        <div class="container">
-           <h1 class="titre"> LET’S PLAY <br> A LITTLE GAME...</h1>
-           <div class="espace-vertical"></div>
-           <img class="fleche" src="./home/Logos/flèche_down_header.png" alt="fleche down">
+    </header>
+    <main>
+        <div class="scroll">
+            <img src="./home/Logos/logo_bat_flèche.png" alt="flèche haut">
+            <img class="social" src="./home/Logos/icon_facebook.png" alt="icon_facebook">
+            <img class="social" src="./home/Logos/icon_ig.png" alt="icon_instagram">
+            <img class="social" src="./home/Logos/icon_tw.png" alt="icon_thwiter">
+            <img src="./home/Logos/logo_bat_flèche_2.png" alt="flèche bas">
         </div>
-    </section>
 
-    <section id="introduction">
-        <div class="container">
-          
-            <div>
-              <h2>Connaissez-vous bien le chevalier noir?</h2>
-              <img src="./home/Illustrations/Batgame_2.png" alt="batman">
+        <section id="hero">
+            <div class="container">
+                <h1 class="titre"> LET’S PLAY <br> A LITTLE GAME...</h1>
+                <div class="espace-vertical"></div>
+                <img class="fleche" src="./home/Logos/flèche_down_header.png" alt="fleche down">
             </div>
-          </div>
-          <button id="gamestart" onclick="startQuiz()">Démarrer le quizz</button>
+        </section>
+
+        <section id="quiz">
+            <div class="container">
+                <div class="intro">
+                    <h2>Connaissez-vous bien le chevalier noir?</h2>
+                    <img class="batman" src="./home/Illustrations/Batgame_2.png" alt="batman">
+                    <div class="startQuiz">
+                        <button id="gamestart" onclick="startQuiz()">Démarrer le quizz</button>
+                    </div>
+                </div>
+               
         
-      </section>
-      <div class="espace-vertical"></div>
-      
-      <section id="quiz" style="display: none;">
-          <div class="container">
-            <div class="image-container"><img class="image-gauche" src="./home/Illustrations/Batgame_3.png" alt=""></div>
-            <div>
-            <h1><span class="level">1</span>/<span>15</h1><br>
-            <h2 id="question">Quel est l'autre nom de l'Homme-Mystère ?</h2>
-           
-            <div class="choices" id="choices">
-                <input type="checkbox">
-                <label for="">Le Sphinx</label>
-                <input type="checkbox">
-                <label for="">Saphir</label>
-                <input type="checkbox">
-                <label for="">Le Joker</label>
+                <div class="espace-vertical"></div>
+                <div class="jeu" style="display: none;">
+                    <div class="image-container">
+                        <img class="image-gauche" src="" alt="">
+                    </div>
+        
+                    <div class="gamebox">
+                        <h1><span class="level">1</span>/<span>15</span></h1><br>
+                        <h2 id="question">Quel est l'autre nom de l'Homme-Mystère ?</h2>
+        
+                        <div class="choices" id="choices">
+                            <div class="qcm">
+                                <input type="checkbox">
+                                <label for="choix1">Le Sphinx</label>
+                            </div>
+                            <div class="qcm">
+                                <input type="checkbox">
+                                <label for="choix2">Saphir</label>
+                            </div>
+                            <div class="qcm">
+                                <input type="checkbox">
+                                <label for="choix3">Le Joker</label>
+
+                                <span class="verifying"></span>
+                            </div>
+                        </div>
+        
+                        <button class="nextButton" id="nextButton" style="display: block;">Question Suivante</button>
+                    </div>
+                </div>
+                <div class="overlay-game">
+                    <div class="popup">
+                        <h2 class="popup-titre"></h2>
+                        <p class="popup-texte"></p>
+                        <button class="restart">RECOMMENCER LE QUIZ</button>
+                    </div>
+                </div>
             </div>
-            <button class="nextButton" id="nextButton" style="display: block;">Question Suivante</button>
-           </div>
-          </div>
-      </section>
-     
-      
+
+        </section>
+        
     </main>
-   <footer>
-    <div class="container" >
-        <div class="text-footer">
-            <img src="./home/Logos/icon_WB.png" alt="">
-            Ce projet respecte l’univers cinématographique des films Batman récents. Version Nolan & 
-                Snyder & Reeves
+
+    <footer>
+        <div class="container">
+            <div class="text-footer">
+                <img src="./home/Logos/icon_WB.png" alt="">
+                Ce projet respecte l’univers cinématographique des films Batman récents. Version Nolan & Snyder & Reeves
+            </div>
+            <div class="social-footer">
+                <a href="#" class="social-item">
+                    <img src="./home/Logos/logo_sayna_white.png" alt="">
+                    <img src="./home/Logos/icon_x.png" alt="">
+                    <img src="./home/Logos/icon_DC.png" alt="">
+                </a>
+                <a class="social-item" href=""><img src="./home/Logos/icon_facebook.png" alt="logo facebook"></a>
+                <a class="social-item" href=""><img src="./home/Logos/icon_ig.png" alt="icon_instagram"></a>
+                <a class="social-item" href=""><img src="./home/Logos/icon_tw.png" alt="logo twitter"></a>
+            </div>
         </div>
-        <div class="social-footer" >
-            <a href="#" class="social-item">
-                <img src="./home/Logos/logo_sayna_white.png" alt="">
-                <img src="./home/Logos/icon_x.png" alt="">
-                <img src="./home/Logos/icon_DC.png" alt="">
-            </a>
-            <a class="social-item" href=""><img src="./home/Logos/icon_facebook.png" alt="logo facebook"></a>
-            <a class="social-item" href=""><img src="./home/Logos/icon_ig.png" alt="icon_instagram"></a>
-            <a class="social-item" href=""><img src="./home/Logos/icon_tw.png" alt="logo twitter"></a>
-        </div>
-    </div>
-</footer>
-<script src="./home/script/jeu.js"></script>
+    </footer>
+    <script src="./home/script/jeu.js"></script>
+    <script src="./home/script/jquery-3.6.0.js"></script>
 </body>
 </html>

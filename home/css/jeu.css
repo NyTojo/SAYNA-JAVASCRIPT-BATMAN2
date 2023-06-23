@@ -162,26 +162,6 @@ h1, h2, h3, p {
 }
 
 
-button{
-  margin-left: 500px;
-    text-decoration: none;
-    color: var(--white-color);
-    font-size: 22px;
-    padding: 10px 40px;
-    margin-top: 10px;
-    border-radius: 10px;
-    background: linear-gradient(
-        90deg,#dfdfdf,#b95a01
-    );
-    box-shadow: var(--black-color) 15px 15px 50px;
-}
-
-button:hover {
-    background: linear-gradient(
-      80deg,var(--white-color),var(--yellow-color)
-  );
-    color: #ffffff;
-}
 /* Styles pour les groupe de boutons */
 #hero
 .container
@@ -231,45 +211,47 @@ h1{
       filter: invert(4%) sepia(100%) saturate(1680%) hue-rotate(352deg) brightness(109%) contrast(104%);
 }
 
-#introduction
+#quiz
 .container
- img{
-  margin-left: -150px
-  ;
+.batman{
+  margin-left: -150px;
 }
 
+
+button{
+  margin-left: 150px;
+  border-color: rgb(155, 5, 5);
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 22px;
+  padding: 10px 40px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#dfdfdf,#b95a01);
+  box-shadow: var(--black-color) 15px 15px 50px;
+}
+
+button:hover,
 #quiz
-.container{
-  width: 900px;
- align-items: center;
- display: flex;
- justify-content: space-between;
+.nextButton:hover {
+  background: linear-gradient(80deg,var(--white-color),var(--yellow-color));
+  color: #ffffff;
 }
 
 #quiz
 .nextButton{
-  font-size: 30px;
-  background: linear-gradient(
-        80deg,var(--gradient-white),var(--yellow-color)
-    );
-    font-size: 22px;
-    margin-top: 10px;
-    border-radius: 10px;
-    width: 70px;
+  margin-left: 150px;
+  border-color: black ;
+  color: var(--white-color);
+  font-size: 22px;
+  padding: 10px 40px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#dfdfdf,#b95a01);
+  box-shadow: var(--black-color) 15px 15px 50px;
 }
 
-#quiz
-.container
-.choices{
-  display: flex;
-  flex-direction: column;
-}
 
-#quiz
-h1{
-  margin-top: -100px;
-  margin-left: 50px;
-}
 
 /* Espacement vertical */
 .espace-vertical {

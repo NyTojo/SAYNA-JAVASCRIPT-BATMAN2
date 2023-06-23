@@ -1,184 +1,187 @@
-const questions = [
-    {
-      question: "Quel est l'autre nom de l'Homme-Mystère ?",
-      choices: ["Le Sphinx", "Saphir", "Le Joker"],
-      answer: "Le Sphinx"
-    },
-    {
-      question: "Quel est l'objet fétiche de Double Face ?",
-      choices: ["Une pièce", "Un livre", "Un couteau"],
-      answer: "Une pièce"
-    },
-    {
-      question: "Qui a produit Batman en 1964 ?",
-      choices: ["Stanley Kubrick", "Andy Warhol", "Peter Jackson"],
-      answer: "Andy Warhol"
-    },
-    {
-      question: "Batman c'est aussi le nom d'une ville en...",
-      choices: ["Turquie", "Islande", "Allemagne"],
-      answer: "Turquie"
-    },
-    {
-      question: "Quel vilain apparaît pour la première fois dans le Batman 232 ?",
-      choices: ["Le Pingouin", "Ra's al Ghul", "Poison Ivy"],
-      answer: "Ra's al Ghul"
-    },
-    {
-      question: "Quelle ville Batman défend-il ?",
-      choices: ["Gotham City", "Starling City", "Hell's Kitchen"],
-      answer: "Gotham City"
-    },
-    {
-      question: "Tim Burton a réalisé deux Batman, qui jouait Batman ?",
-      choices: ["Georges Clooney", "Val Kilmer", "Michael Keaton"],
-      answer: "Michael Keaton"
-    },
-    {
-      question: "Dans son premier Batman (1989) Jack Nicholson jouait :",
-      choices: ["Le Pingouin", "L'Homme Mystère", "Le Joker"],
-      answer: "Le Joker"
-    },
-    {
-      question: "Qui est Jonathan Crane ?",
-      choices: ["L'Épouvantail", "Le Joker", "Hugo Strange"],
-      answer: "L'Épouvantail"
-    },
-    {
-      question: "Qui est l'interprète de Catwoman dans le nouveau Batman de Matt Reeves (2022) ?",
-      choices: ["Emma Watson", "Gigi Hadid", "Lola Iolani Momoa", "Zoë Kravitz"],
-      answer: "Zoë Kravitz"
-    },
-    {
-      question: "Quel est le prénom des parents du jeune Bruce Wayne ?",
-      choices: ["Thomas et Martha", "Elaine et Georges", "Martha et James"],
-      answer: "Thomas et Martha"
-    },
-    {
-      question: "Qui interprète le Joker en 2008 ?",
-      choices: ["Heath Ledger", "Haeth Ledger", "Heath Ledger"],
-      answer: "Heath Ledger"
-    },
-    {
-      question: "En quelle année Robin fait-il sa première apparition ?",
-      choices: ["1940", "1939", "1941"],
-      answer: "1940"
-    },
-    {
-      question: "Qui est la fille de Batman et Catwoman (Earth-2) ?",
-      choices: ["Oracle", "Huntress", "Black Canary"],
-      answer: "Huntress"
+var currentQuestion = 1;
+var totalQuestions = 15;
+var playerResponses = [];
+
+var jeuSection = document.getElementById('quiz');
+var jeuDiv = document.querySelector('.jeu');
+var introDiv = document.querySelector('.intro');
+var levelSpan = document.querySelector('.level');
+var questionHeading = document.getElementById('question');
+var choicesDiv = document.getElementById('choices');
+var nextButton = document.getElementById('nextButton');
+
+function startQuiz() {
+  introDiv.style.display = 'none';
+  jeuDiv.style.display = 'block';
+
+  levelSpan.textContent = currentQuestion;
+
+  function loadQuestion() {
+    var questions = [
+      {
+        question: "Quel est l'autre nom de l'Homme-Mystère ?",
+        choices: ["Le Sphinx", "Saphir", "Le Joker"],
+        answer: "Le Sphinx",
+        image: "./home/Illustrations/Batgame_3.png/"
+      },
+      {
+        question: "Quel est l'ancienne proffession de Harley Quinn ?",
+        choices: ["infirmiere", "Psychiatre", "Dentiste"],
+        answer: "Le Sphinx",
+        image: "./home/Illustrations/Batgame_3.png/"
+      },
+      {
+        question: "Quel est l'objet fétiche de Double Face ?",
+        choices: ["Une pièce", "Un livre", "Un couteau"],
+        answer: "Une pièce",
+        image: "./home/Illustrations/Batgame_3.png/"
+      },
+      {
+        question: "Qui a produit Batman en 1964 ?",
+        choices: ["Stanley Kubrick", "Andy Warhol", "Peter Jackson"],
+        answer: "Andy Warhol",
+        image: "./home/Illustrations/Batgame_3.png/"
+      },
+      {
+        question: "Batman c'est aussi le nom d'une ville en...",
+        choices: ["Turquie", "Islande", "Allemagne"],
+        answer: "Turquie",
+        image: "./home/Illustrations/Batgame_3.png/"
+      },
+      {
+        question: "Quel vilain apparaît pour la première fois dans le Batman 232 ?",
+        choices: ["Le Pingouin", "Ra's al Ghul", "Poison Ivy"],
+        answer: "Ra's al Ghul",
+        image: "./home/Illustrations/Batgame_3.png/"
+      },
+      {
+        question: "Quelle ville Batman défend-il ?",
+        choices: ["Gotham City", "Starling City", "Hell's Kitchen"],
+        answer: "Gotham City",
+        image: "./home/Illustrations/Batgame_3.png/"
+      },
+      {
+        question: "Tim Burton a réalisé deux Batman, qui jouait Batman ?",
+        choices: ["Georges Clooney", "Val Kilmer", "Michael Keaton"],
+        answer: "Michael Keaton",
+        image: "./home/Illustrations/Batgame_3.png/"
+      },
+      {
+        question: "Dans son premier Batman (1989) Jack Nicholson jouait :",
+        choices: ["Le Pingouin", "L'Homme Mystère", "Le Joker"],
+        answer: "Le Joker",
+        image: "./home/Illustrations/Batgame_3.png/"
+      },
+      {
+        question: "Qui est Jonathan Crane ?",
+        choices: ["L'Épouvantail", "Le Joker", "Hugo Strange"],
+        answer: "L'Épouvantail",
+        image: "./home/Illustrations/Batgame_3.png/"
+      },
+      {
+        question: "Qui est l'interprète de Catwoman dans le nouveau Batman de Matt Reeves (2022) ?",
+        choices: ["Emma Watson", "Gigi Hadid", "Lola Iolani Momoa", "Zoë Kravitz"],
+        answer: "Zoë Kravitz",
+        image: "./home/Illustrations/Batgame_3.png/"
+      },
+      {
+        question: "Quel est le prénom des parents du jeune Bruce Wayne ?",
+        choices: ["Thomas et Martha", "Elaine et Georges", "Martha et James"],
+        answer: "Thomas et Martha",
+        image: "./home/Illustrations/Batgame_3.png/"
+      },
+      {
+        question: "Qui interprète le Joker en 2008 ?",
+        choices: ["Heath Ledger", "Haeth Ledger", "Heath Ledger"],
+        answer: "Heath Ledger",
+        image: "./home/Illustrations/Batgame_3.png/"
+      },
+      {
+        question: "En quelle année Robin fait-il sa première apparition ?",
+        choices: ["1940", "1939", "1941"],
+        answer: "1940",
+        image: "./home/Illustrations/Batgame_3.png/"
+      },
+      {
+        question: "Qui est la fille de Batman et Catwoman (Earth-2) ?",
+        choices: ["Oracle", "Huntress", "Black Canary"],
+        answer: "Huntress",
+        image: "./home/Illustrations/Batgame_3.png/"
+      }
+    ];
+    var currentQuestionData = questions[currentQuestion - 1];
+    var question = currentQuestionData.question;
+    var choices = currentQuestionData.choices;
+
+    questionHeading.textContent = question;
+    choicesDiv.innerHTML = '';
+
+    for (var i = 0; i < choices.length; i++) {
+      var choiceDiv = document.createElement('div');
+      choiceDiv.className = 'qcm';
+
+      var checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+
+      var label = document.createElement('label');
+      label.htmlFor = 'choix' + (i + 1);
+      label.textContent = choices[i];
+
+      choiceDiv.appendChild(checkbox);
+      choiceDiv.appendChild(label);
+      choicesDiv.appendChild(choiceDiv);
     }
-
-  ];
-
-
-  let currentQuestion = 0;
-  let score = 0;
-
-  const gameStartButton = document.getElementById("gamestart");
-  const quizSection = document.getElementById("quiz");
-  const questionElement = document.getElementById("question");
-  const choicesElement = document.getElementById("choices");
-  const nextButton = document.getElementById("nextButton");
-
-
-
-  gameStartButton.addEventListener("click", startQuiz);
-  nextButton.addEventListener("click", nextQuestion);
-
-  function startQuiz() {
-    document.getElementById("quiz").style.display = "block";
-    nextButton.style.display = "block";
-    showQuestion();
-    document.getElementById("introduction").style.display = "none";
-  }
-  
-
-  function showQuestion() {
-    const question = questions[currentQuestion];
-    questionElement.textContent = question.question;
-    choicesElement.innerHTML = "";
-
-    question.choices.forEach(choice => {
-      const label = document.createElement("label");
-      const checkbox = document.createElement("input");
-      checkbox.type = "checkbox";
-      checkbox.name = "choice";
-      checkbox.value = choice;
-
-      label.appendChild(checkbox);
-      label.appendChild(document.createTextNode(choice));
-
-      choicesElement.appendChild(label);
-    });
-
-    nextButton.style.display = "none";
   }
 
   function nextQuestion() {
-    const selectedChoices = document.querySelectorAll('input[name="choice"]:checked');
-    let userAnswer = [];
-
-    selectedChoices.forEach(choice => {
-      userAnswer.push(choice.value);
-    });
-
-    const question = questions[currentQuestion];
-    const isCorrect = compareArrays(userAnswer, question.answer);
-
-    if (isCorrect) {
-      score++;
-    }
-
     currentQuestion++;
-
-    if (currentQuestion < questions.length) {
-      showQuestion();
+    if (currentQuestion <= totalQuestions) {
+      loadQuestion();
+      levelSpan.textContent = currentQuestion;
     } else {
-      showResult();
+      console.log('Le quizz est terminé');
     }
   }
+  function nextQuestion() {
+    currentQuestion++;
 
-  function compareArrays(arr1, arr2) {
-    if (arr1.length !== arr2.length) {
-      return false;
+    // Récupérer les réponses sélectionnées par le joueur
+    var selectedChoices = document.querySelectorAll('input[type="checkbox"]:checked');
+    var playerAnswer = [];
+    for (var i = 0; i < selectedChoices.length; i++) {
+      playerAnswer.push(selectedChoices[i].nextSibling.textContent);
     }
 
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
+    // Ajouter la réponse du joueur au tableau playerResponses
+    playerResponses.push(playerAnswer);
+
+    if (currentQuestion <= totalQuestions) {
+      loadQuestion();
+      levelSpan.textContent = currentQuestion;
+    } else {
+      endQuiz();
+    }
+ 
+    console.log('Le quizz est terminé');
+    console.log('Réponses des joueurs :');
+    console.log(playerResponses);
+
+    // Calculer le résultat en comparant les réponses des joueurs avec les réponses correctes
+    var questions = [
+      // ... vos questions et réponses ici ...
+    ];
+
+    var correctAnswers = 0;
+    for (var i = 0; i < totalQuestions; i++) {
+      if (playerResponses[i].toString() === questions[i].answer.toString()) {
+        correctAnswers++;
       }
     }
 
-    return true;
+    console.log('Résultat : ' + correctAnswers + '/' + totalQuestions);
   }
+  
 
-  function showResult() {
-    quizSection.innerHTML = `
-      <h2>Résultat</h2>
-      <p>Vous avez répondu correctement à ${score} question(s) sur ${questions.length}.</p>
-      <button id="restart">Recommencer le quizz</button>
-    `;
+  nextButton.addEventListener('click', nextQuestion);
+}
 
-    const restartButton = document.getElementById("restart");
-    restartButton.addEventListener("click", restartQuiz);
-  }
-
-  function restartQuiz() {
-    currentQuestion = 0;
-    score = 0;
-    quizSection.style.display = "none";
-    gameStartButton.style.display = "block";
-  }
-
-  var topleftImg = ["./home/Illustrations/Batgame_4.png",
-                "./home/Illustrations/Batgame_5.png",
-                "./home/Illustrations/Batgame_6.png",
-                "./home/Illustrations/Batgame_7.png",
-                "./home/Illustrations/Batgame_8.png",
-                "./home/Illustrations/Batgame_9.png",
-                "./home/Illustrations/Batgame_10.png",
-                "./home/Illustrations/Batgame_11.png",
-                "./home/Illustrations/Batgame_12.png",
-            ]

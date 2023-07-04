@@ -622,7 +622,7 @@ span{
     padding: 10px 40px;
     margin-top: 10px;
     border-radius: 10px;
-    margin-left: 100px;
+    margin-left: 250px;
     border: linear-gradient(80deg,var(--gradient-white),var(--gradient-red));;
     background: linear-gradient(80deg,var(--gradient-white),var(--gradient-red));
 }

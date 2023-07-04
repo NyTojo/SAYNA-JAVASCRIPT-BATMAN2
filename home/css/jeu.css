@@ -217,10 +217,24 @@ h1{
   margin-left: -150px;
 }
 
+.jeu {
+  display: flex;
+  align-items: center;
+}
+
+.image-container {
+  margin-right: 20px; /* Ajustez cette valeur selon vos préférences */
+}
+
+.image-container {
+  float: left;
+  margin-right: 20px; 
+}
+
 
 button{
   margin-left: 150px;
-  border-color: rgb(155, 5, 5);
+  border-color: #b95a01;
   text-decoration: none;
   color: var(--white-color);
   font-size: 22px;
@@ -250,8 +264,23 @@ button:hover,
   background: linear-gradient(90deg,#dfdfdf,#b95a01);
   box-shadow: var(--black-color) 15px 15px 50px;
 }
+.checkbox-custom {
+  height: 30px;
+  margin-right: 8px; 
+}
+
+.label {
+  margin-left: 8px;
+  float: right;
+}
 
 
+
+.qcm{
+  height: 30px;
+  margin-top: 5px;
+  background-color: #b6b2b2;
+}
 
 /* Espacement vertical */
 .espace-vertical {

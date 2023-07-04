@@ -51,6 +51,7 @@
                
         
                 <div class="espace-vertical"></div>
+                
                 <div class="jeu" style="display: none;">
                     <div class="image-container">
                         <img class="image-gauche" src="" alt="">
@@ -62,31 +63,31 @@
         
                         <div class="choices" id="choices">
                             <div class="qcm">
-                                <input type="checkbox">
-                                <label for="choix1">Le Sphinx</label>
-                            </div>
-                            <div class="qcm">
-                                <input type="checkbox">
-                                <label for="choix2">Saphir</label>
-                            </div>
-                            <div class="qcm">
-                                <input type="checkbox">
-                                <label for="choix3">Le Joker</label>
-
+                                <input type="checkbox" class="checkbox-custom">
+                                <label for="choix1" class="label">Le Sphinx</label>
+                              </div>
+                              <div class="qcm">
+                                <input type="checkbox" class="checkbox-custom">
+                                <label for="choix2" class="label">Saphir</label>
+                              </div>
+                              <div class="qcm">
+                                <input type="checkbox" class="checkbox-custom">
+                                <label for="choix3" class="label">Le Joker</label>
                                 <span class="verifying"></span>
-                            </div>
+                              </div>
                         </div>
         
                         <button class="nextButton" id="nextButton" style="display: block;">Question Suivante</button>
+                        <div class="overlay-game">
+                            <div class="popup">
+                                <h2 class="popup-titre"></h2>
+                                <p class="popup-texte"></p>
+                                <button class="restart" style="display: none;">RECOMMENCER LE QUIZ</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="overlay-game">
-                    <div class="popup">
-                        <h2 class="popup-titre"></h2>
-                        <p class="popup-texte"></p>
-                        <button class="restart">RECOMMENCER LE QUIZ</button>
-                    </div>
-                </div>
+                
             </div>
 
         </section>

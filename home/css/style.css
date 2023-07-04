@@ -619,9 +619,10 @@ span{
     text-decoration: none;
     color: var(--white-color);
     font-size: 22px;
+    padding: 10px 40px;
     margin-top: 10px;
-    margin-left: -300px;
     border-radius: 10px;
+    margin-left: 100px;
     border: linear-gradient(80deg,var(--gradient-white),var(--gradient-red));;
     background: linear-gradient(80deg,var(--gradient-white),var(--gradient-red));
 }
@@ -712,15 +713,47 @@ footer .social-item{
 }
 
 /* Styles pour iframes */
-iframe{
-    align-self: center;
-    width: 560px;
-    height: 400px;
-    border: none;
-    margin: 0 auto;
-    display: block;
-    border: 0;
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  cursor: pointer;
 }
+.image-annonce {
+  width: 560px;
+  height: 400px;
+}
+
+iframe {
+  align-self: center;
+  width: 560px;
+  height: 400px;
+  border: none;
+  margin: 0 auto;
+  display: block;
+  border: 0;
+}
+
+.video-container.playing .image-bande-annonce {
+  display: none;
+}
+.video-container.playing .play-button {
+  display: none;
+}
+.video-container.playing .video {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+
+
+
 
 /* Styles pour les appareils mobiles */
 @media (max-width: 768px) {
